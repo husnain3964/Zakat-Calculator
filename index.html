@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>zakat_Calculator</title>
+    <!-- <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"> -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<script>
+    let rupee= "rupees"
+    function cal() {
+
+        var inp_1 = document.getElementById('input').value;
+
+        var result = (inp_1 * 0.025 ) 
+        var res = document.getElementById('res').value = result ;
+             
+        console.log(inp_1);
+        console.log(result);
+
+    }
+
+
+</script>
+
+<body>
+   
+    <div>
+        <h2> calculate your zakat  ...</h2>
+        <input class="input"  id="input" type="number"  placeholder="put your amount"  name="" id="">
+      
+        <button  class="input" onclick="cal()">calculate</button>
+        <input class="input" id="res" type="number"  placeholder="zakat"  >
+        <h2> your zakat amount will be ...</h2>
+    </div>
+
+</body>
+
+</html>
