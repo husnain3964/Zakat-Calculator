@@ -10,31 +10,40 @@
 </head>
 
 <script>
-    let rupee= "rupees"
-    function cal() {
+     
 
-        var inp_1 = document.getElementById('input').value;
+        function cal() {
+      
 
-        var result = (inp_1 * 0.025 ) 
-        var res = document.getElementById('res').value = result ;
-             
-        console.log(inp_1);
-        console.log(result);
-
-    }
-
+            var inp_1 = document.getElementById('input').value;
+            var notEligibel= "you must have the amount  of 87.48 grams of gold or 612.36 grams of silver. "
+            var eligible="This is your zakat (charity) for the poor."
+            if(inp_1 >192000)
+            {
+            var result = (inp_1 * 0.025)
+            var res = document.getElementById('res').value = result  ;
+             mess= document.getElementById('message').innerText = eligible        
+             console.log(inp_1);
+            console.log(result);
+        }
+        else{
+       mess= document.getElementById("message").innerText=notEligibel
+        }
+        }
+    
 
 </script>
 
 <body>
-   
+
     <div>
-        <h2> calculate your zakat  ...</h2>
-        <input class="input"  id="input" type="number"  placeholder="put your amount"  name="" id="">
-      
-        <button  class="input" onclick="cal()">calculate</button>
-        <input class="input" id="res" type="number"  placeholder="zakat"  >
-        <h2> your zakat amount will be ...</h2>
+        <h2> calculate your zakat ...</h2>
+        <input class="input" id="input" type="text" placeholder="put your amount" name="" id="">
+
+        <button class="input" onclick="cal()">calculate</button>
+        <input class="input" id="res" type="number" placeholder="zakat">
+        <h2 id="message" class="size"> your zakat amount will be ...</h2>
+        
     </div>
 
 </body>
